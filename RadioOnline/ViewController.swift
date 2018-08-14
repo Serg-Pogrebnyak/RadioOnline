@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let nib = UINib(nibName: "CustomCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "Cell")
         
@@ -35,12 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = radioStation[indexPath.row]
-//
-//
-//        return(cell)
-        
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
         cell.nameLabel.text = radioStation[indexPath.row]
@@ -51,16 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
 
     }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return nil
+    }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let flagAction = self.contextualToggleFlagAction(forRowAtIndexPath: indexPath)
         let swipeConfig = UISwipeActionsConfiguration(actions: [flagAction])
-        return swipeConfig
-    }
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = self.contextualDeleteAction(forRowAtIndexPath: indexPath)
-        let swipeConfig = UISwipeActionsConfiguration(actions: [deleteAction])
         return swipeConfig
     }
     
@@ -76,32 +70,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         action.image = UIImage(named: "favorites")
         return action
-    }
-    func contextualDeleteAction(forRowAtIndexPath indexPath: IndexPath)-> UIContextualAction {
-        let action = UIContextualAction(style: .destructive, title: "Delete") { (contextAction: UIContextualAction, sourceView: UIView, completionHandler: (Bool) -> Void) in
-            
-            if self.deleteRadiostation(indexPath) {
-                completionHandler(true)
-                self.tableView.reloadData()
-            } else {
-                completionHandler(false)
-            }
-            
-        }
-        action.image = UIImage(named: "delete")
-        return action
-        
-    }
-    
-    func deleteRadiostation(_ indexPath: IndexPath) -> Bool{
-        if indexPath.row <= radioStation.count {
-            radioStation.remove(at: indexPath.row)
-            return true
-        } else {
-            print("error deleting radiostation")
-            return false
-        }
-        
     }
     
     func addFavorites(_ indexPath: IndexPath) -> Bool{
