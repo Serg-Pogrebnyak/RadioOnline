@@ -12,7 +12,8 @@
 		3FFDF6E12122B4BD00E69812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6DF2122B4BD00E69812 /* Main.storyboard */; };
 		3FFDF6E32122B4BE00E69812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6E22122B4BE00E69812 /* Assets.xcassets */; };
 		3FFDF6E62122B4BE00E69812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6E42122B4BE00E69812 /* LaunchScreen.storyboard */; };
-		3FFDF6F42122E18000E69812 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF6F32122E18000E69812 /* MyCustomCell.swift */; };
+		3FFDF71C21231F4A00E69812 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF71B21231F4A00E69812 /* CustomCell.xib */; };
+		3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF71D21231F5B00E69812 /* CustomCell.swift */; };
 		414EC2C5759BB23451B9BE69 /* Pods_RadioOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +26,8 @@
 		3FFDF6E22122B4BE00E69812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FFDF6E52122B4BE00E69812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FFDF6E72122B4BE00E69812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FFDF6F32122E18000E69812 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
+		3FFDF71B21231F4A00E69812 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		3FFDF71D21231F5B00E69812 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		85CE0378CAF0F4DBDB6518F9 /* Pods-RadioOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,7 +73,8 @@
 		3FFDF6DA2122B4BD00E69812 /* RadioOnline */ = {
 			isa = PBXGroup;
 			children = (
-				3FFDF6F32122E18000E69812 /* MyCustomCell.swift */,
+				3FFDF71B21231F4A00E69812 /* CustomCell.xib */,
+				3FFDF71D21231F5B00E69812 /* CustomCell.swift */,
 				3FFDF6DB2122B4BD00E69812 /* AppDelegate.swift */,
 				3FFDF6DD2122B4BD00E69812 /* ViewController.swift */,
 				3FFDF6DF2122B4BD00E69812 /* Main.storyboard */,
@@ -151,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFDF71C21231F4A00E69812 /* CustomCell.xib in Resources */,
 				3FFDF6E62122B4BE00E69812 /* LaunchScreen.storyboard in Resources */,
 				3FFDF6E32122B4BE00E69812 /* Assets.xcassets in Resources */,
 				3FFDF6E12122B4BD00E69812 /* Main.storyboard in Resources */,
@@ -211,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFDF6F42122E18000E69812 /* MyCustomCell.swift in Sources */,
+				3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */,
 				3FFDF6DE2122B4BD00E69812 /* ViewController.swift in Sources */,
 				3FFDF6DC2122B4BD00E69812 /* AppDelegate.swift in Sources */,
 			);

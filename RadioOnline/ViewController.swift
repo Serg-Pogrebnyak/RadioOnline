@@ -19,8 +19,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let nib = UINib(nibName: "MyCustomCell", bundle: nil)
-//        self.tableView.register(nib, forCellReuseIdentifier: "cell")
+        let nib = UINib(nibName: "CustomCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "Cell")
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -41,10 +41,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //
 //        return(cell)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
         cell.nameLabel.text = radioStation[indexPath.row]
         cell.descriptionLabel.text = "gggggggg"
+        cell.imageRadioStation.image = #imageLiteral(resourceName: "delete")
         
         
         return cell
