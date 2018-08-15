@@ -7,7 +7,30 @@
 //
 
 import Foundation
+import UIKit
 struct DataManager {
+//    static func loadStationsFromJSON() -> [RadioStation] {
+//        var stations = [RadioStation]()
+//        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+//        // Get the Radio Stations
+//        DataManager.getStationDataWithSuccess() { (data) in
+//            defer {
+//                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
+//            }
+//            if kDebugLog { print("Stations JSON Found") }
+//            guard let data = data,
+//                let jsonDictionary = try? JSONDecoder().decode([String: [RadioStation]].self, from: data),
+//                let stationsArray = jsonDictionary["station"]
+//
+//                else {
+//                    if kDebugLog { print("JSON Station Loading Error") }
+//                    return
+//            }
+//             stations = stationsArray
+//        }
+//        print(stations)
+//        return stations
+//    }
     
     static func getStationDataWithSuccess(success: @escaping ((_ metaData: Data?) -> Void)) {
         

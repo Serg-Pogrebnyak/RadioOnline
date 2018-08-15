@@ -17,9 +17,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadStationsFromJSON()
-        print(stations)
+        //print(stations)
     }
     
+    @IBAction func SetNewVC(_ sender: Any) {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TableVC") as! UITabBarController
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
     func loadStationsFromJSON() {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         // Get the Radio Stations

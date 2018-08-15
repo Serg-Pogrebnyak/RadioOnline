@@ -10,14 +10,15 @@ import UIKit
 
 class AllStationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var radioStation = ["Rock FM", "Kiss Fm", "Avto Radio", "101,3 FM", "Radio 90h"]
-    
+    var stations = [RadioStation]()
+    var cell : CustomCell?
 
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //stations = DataManager.loadStationsFromJSON()
+        loadStationsFromJSON()
         let nib = UINib(nibName: "CustomCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "Cell")
         
@@ -30,19 +31,19 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (radioStation.count)
+        return (stations.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
-        cell.nameLabel.text = radioStation[indexPath.row]
-        cell.descriptionLabel.text = "gggggggg"
-        cell.imageRadioStation.image = #imageLiteral(resourceName: "delete")
+        cell?.nameLabel.text = stations[indexPath.row].name
+        cell?.descriptionLabel.text = stations[indexPath.row].desc
+        //cell.imageRadioStation.image = #imageLiteral(resourceName: "delete")
+        setImage(station: stations[indexPath.row])
         
-        
-        return cell
+        return cell!
         
     }
     
@@ -78,14 +79,84 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     @IBAction func action(_ sender: Any) {
-        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "AllVC") as! UITabBarController
+        UIApplication.shared.keyWindow?.rootViewController = viewController
+    }
+    //**************************************************************
+    func loadStationsFromJSON() {
+        //var stations = [RadioStation]()
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        // Get the Radio Stations
+        DataManager.getStationDataWithSuccess() { (data) in
+            defer {
+                DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
+            }
+            if kDebugLog { print("Stations JSON Found") }
+            guard let data = data,
+                let jsonDictionary = try? JSONDecoder().decode([String: [RadioStation]].self, from: data),
+                let stationsArray = jsonDictionary["station"]
+
+                else {
+                    if kDebugLog { print("JSON Station Loading Error") }
+                    return
+            }
+            self.stations = stationsArray
+        }
 
     }
+
+    func setImage(station: RadioStation) {
+        
+        // Configure the cell...
+        //cell.stationName.text = station.name
+        
+        let imageURL = station.imageURL as NSString
+        
+        if imageURL.contains("http") {
+            
+            if let url = URL(string: station.imageURL) {
+                cell?.imageRadioStation.loadImageFromURL(url: url) { (image) in
+                    // station image loaded
+                }
+            }
+            
+        } else if imageURL != "" {
+            cell?.imageRadioStation.image = UIImage(named: imageURL as String)
+            
+        } else {
+            cell?.imageRadioStation.image = UIImage(named: "stationImage") 
+        }
+    }
+
+
+
+}
+
+extension UIImageView {
     
-    
-
-    
-
-
-
+    func loadImageFromURL(url: URL, callback: @escaping (UIImage) -> ()) {
+        let session = URLSession.shared
+        
+        let downloadTask = session.downloadTask(with: url, completionHandler: {
+            [weak self] url, response, error in
+            
+            if error == nil && url != nil {
+                if let data = NSData(contentsOf: url!) {
+                    if let image = UIImage(data: data as Data) {
+                        
+                        DispatchQueue.main.async(execute: {
+                            
+                            if let strongSelf = self {
+                                strongSelf.image = image
+                                callback(image)
+                            }
+                        })
+                    }
+                }
+            }
+        })
+        
+        downloadTask.resume()
+    }
 }
