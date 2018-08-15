@@ -12,6 +12,7 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
 
     var radioStation = ["Rock FM", "Kiss Fm", "Avto Radio", "101,3 FM", "Radio 90h"]
     
+
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,11 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
         return true
     }
     
+    
+    @IBAction func action(_ sender: Any) {
+        
+
+    }
     
     
 

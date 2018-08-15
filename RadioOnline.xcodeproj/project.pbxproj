@@ -15,6 +15,15 @@
 		3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF71D21231F5B00E69812 /* CustomCell.swift */; };
 		3FFDF7202123272300E69812 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF71F2123272300E69812 /* FavoritesViewController.swift */; };
 		3FFDF7222124064C00E69812 /* AllStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7212124064C00E69812 /* AllStationViewController.swift */; };
+		3FFDF72C2124300C00E69812 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7232124300700E69812 /* Settings.swift */; };
+		3FFDF72D2124300C00E69812 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7242124300700E69812 /* CollectionViewController.swift */; };
+		3FFDF72E2124300C00E69812 /* CollectionViewCellXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7252124300800E69812 /* CollectionViewCellXib.swift */; };
+		3FFDF72F2124300C00E69812 /* SearchCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7262124300900E69812 /* SearchCollectionReusableView.swift */; };
+		3FFDF7302124300C00E69812 /* RadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7272124300900E69812 /* RadioStation.swift */; };
+		3FFDF7312124300C00E69812 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7282124300A00E69812 /* DataManager.swift */; };
+		3FFDF7322124300C00E69812 /* CollectionViewCellXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF7292124300B00E69812 /* CollectionViewCellXib.xib */; };
+		3FFDF7332124300C00E69812 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF72A2124300B00E69812 /* CollectionViewCell.swift */; };
+		3FFDF7342124300C00E69812 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF72B2124300C00E69812 /* stations.json */; };
 		414EC2C5759BB23451B9BE69 /* Pods_RadioOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +39,15 @@
 		3FFDF71D21231F5B00E69812 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3FFDF71F2123272300E69812 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3FFDF7212124064C00E69812 /* AllStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationViewController.swift; sourceTree = "<group>"; };
+		3FFDF7232124300700E69812 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3FFDF7242124300700E69812 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		3FFDF7252124300800E69812 /* CollectionViewCellXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellXib.swift; sourceTree = "<group>"; };
+		3FFDF7262124300900E69812 /* SearchCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionReusableView.swift; sourceTree = "<group>"; };
+		3FFDF7272124300900E69812 /* RadioStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStation.swift; sourceTree = "<group>"; };
+		3FFDF7282124300A00E69812 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3FFDF7292124300B00E69812 /* CollectionViewCellXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCellXib.xib; sourceTree = "<group>"; };
+		3FFDF72A2124300B00E69812 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3FFDF72B2124300C00E69812 /* stations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		85CE0378CAF0F4DBDB6518F9 /* Pods-RadioOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,17 +93,66 @@
 		3FFDF6DA2122B4BD00E69812 /* RadioOnline */ = {
 			isa = PBXGroup;
 			children = (
-				3FFDF71B21231F4A00E69812 /* CustomCell.xib */,
-				3FFDF71D21231F5B00E69812 /* CustomCell.swift */,
+				3FFDF73921243B1700E69812 /* Collection View Controller */,
+				3FFDF73821243B0100E69812 /* Table View Controller */,
+				3FFDF73721243A8300E69812 /* Model and settings */,
+				3FFDF73621243A6C00E69812 /* Custom Table Cell */,
+				3FFDF73521243A3900E69812 /* Custom Collection Cell */,
 				3FFDF6DB2122B4BD00E69812 /* AppDelegate.swift */,
 				3FFDF6DF2122B4BD00E69812 /* Main.storyboard */,
-				3FFDF71F2123272300E69812 /* FavoritesViewController.swift */,
-				3FFDF7212124064C00E69812 /* AllStationViewController.swift */,
 				3FFDF6E22122B4BE00E69812 /* Assets.xcassets */,
 				3FFDF6E42122B4BE00E69812 /* LaunchScreen.storyboard */,
 				3FFDF6E72122B4BE00E69812 /* Info.plist */,
 			);
 			path = RadioOnline;
+			sourceTree = "<group>";
+		};
+		3FFDF73521243A3900E69812 /* Custom Collection Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDF72A2124300B00E69812 /* CollectionViewCell.swift */,
+				3FFDF7252124300800E69812 /* CollectionViewCellXib.swift */,
+				3FFDF7292124300B00E69812 /* CollectionViewCellXib.xib */,
+			);
+			path = "Custom Collection Cell";
+			sourceTree = "<group>";
+		};
+		3FFDF73621243A6C00E69812 /* Custom Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDF71B21231F4A00E69812 /* CustomCell.xib */,
+				3FFDF71D21231F5B00E69812 /* CustomCell.swift */,
+			);
+			path = "Custom Table Cell";
+			sourceTree = "<group>";
+		};
+		3FFDF73721243A8300E69812 /* Model and settings */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDF7262124300900E69812 /* SearchCollectionReusableView.swift */,
+				3FFDF7282124300A00E69812 /* DataManager.swift */,
+				3FFDF7272124300900E69812 /* RadioStation.swift */,
+				3FFDF7232124300700E69812 /* Settings.swift */,
+				3FFDF72B2124300C00E69812 /* stations.json */,
+			);
+			path = "Model and settings";
+			sourceTree = "<group>";
+		};
+		3FFDF73821243B0100E69812 /* Table View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDF71F2123272300E69812 /* FavoritesViewController.swift */,
+				3FFDF7212124064C00E69812 /* AllStationViewController.swift */,
+			);
+			path = "Table View Controller";
+			sourceTree = "<group>";
+		};
+		3FFDF73921243B1700E69812 /* Collection View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDF7242124300700E69812 /* CollectionViewController.swift */,
+			);
+			path = "Collection View Controller";
 			sourceTree = "<group>";
 		};
 		4646B90E0F196214A332D7DE /* Pods */ = {
@@ -108,7 +175,6 @@
 				3FFDF6D42122B4BD00E69812 /* Sources */,
 				3FFDF6D52122B4BD00E69812 /* Frameworks */,
 				3FFDF6D62122B4BD00E69812 /* Resources */,
-				349802656DCB8C8A7FBD308E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -159,7 +225,9 @@
 			files = (
 				3FFDF71C21231F4A00E69812 /* CustomCell.xib in Resources */,
 				3FFDF6E62122B4BE00E69812 /* LaunchScreen.storyboard in Resources */,
+				3FFDF7342124300C00E69812 /* stations.json in Resources */,
 				3FFDF6E32122B4BE00E69812 /* Assets.xcassets in Resources */,
+				3FFDF7322124300C00E69812 /* CollectionViewCellXib.xib in Resources */,
 				3FFDF6E12122B4BD00E69812 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,32 +235,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		349802656DCB8C8A7FBD308E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
-				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		50751E89CDBC4E5C2909B934 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,10 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFDF72D2124300C00E69812 /* CollectionViewController.swift in Sources */,
+				3FFDF7312124300C00E69812 /* DataManager.swift in Sources */,
+				3FFDF72F2124300C00E69812 /* SearchCollectionReusableView.swift in Sources */,
+				3FFDF7302124300C00E69812 /* RadioStation.swift in Sources */,
 				3FFDF7222124064C00E69812 /* AllStationViewController.swift in Sources */,
+				3FFDF72E2124300C00E69812 /* CollectionViewCellXib.swift in Sources */,
 				3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */,
 				3FFDF7202123272300E69812 /* FavoritesViewController.swift in Sources */,
 				3FFDF6DC2122B4BD00E69812 /* AppDelegate.swift in Sources */,
+				3FFDF72C2124300C00E69812 /* Settings.swift in Sources */,
+				3FFDF7332124300C00E69812 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
