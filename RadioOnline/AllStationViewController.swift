@@ -1,21 +1,18 @@
 //
-//  ViewController.swift
+//  AllStationViewController.swift
 //  RadioOnline
 //
-//  Created by student on 8/14/18.
+//  Created by student on 8/15/18.
 //  Copyright © 2018 student. All rights reserved.
 //
 
 import UIKit
-import SwipeCellKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AllStationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-    @IBOutlet var tableView: UITableView!
-    
     var radioStation = ["Rock FM", "Kiss Fm", "Avto Radio", "101,3 FM", "Radio 90h"]
     
+    @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,18 +22,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (radioStation.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
         cell.nameLabel.text = radioStation[indexPath.row]
@@ -45,9 +42,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         return cell
-
+        
     }
-
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         return nil
     }
@@ -77,10 +74,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         c?.backgroundColor = UIColor.yellow
         return true
     }
-
+    
+    
+    
 
     
 
 
-}
 
+}

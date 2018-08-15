@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3FFDF6DC2122B4BD00E69812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF6DB2122B4BD00E69812 /* AppDelegate.swift */; };
-		3FFDF6DE2122B4BD00E69812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF6DD2122B4BD00E69812 /* ViewController.swift */; };
 		3FFDF6E12122B4BD00E69812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6DF2122B4BD00E69812 /* Main.storyboard */; };
 		3FFDF6E32122B4BE00E69812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6E22122B4BE00E69812 /* Assets.xcassets */; };
 		3FFDF6E62122B4BE00E69812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF6E42122B4BE00E69812 /* LaunchScreen.storyboard */; };
 		3FFDF71C21231F4A00E69812 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDF71B21231F4A00E69812 /* CustomCell.xib */; };
 		3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF71D21231F5B00E69812 /* CustomCell.swift */; };
 		3FFDF7202123272300E69812 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF71F2123272300E69812 /* FavoritesViewController.swift */; };
+		3FFDF7222124064C00E69812 /* AllStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDF7212124064C00E69812 /* AllStationViewController.swift */; };
 		414EC2C5759BB23451B9BE69 /* Pods_RadioOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +22,6 @@
 		33045C6372B62B8AFB0A6679 /* Pods-RadioOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline.release.xcconfig"; sourceTree = "<group>"; };
 		3FFDF6D82122B4BD00E69812 /* RadioOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFDF6DB2122B4BD00E69812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FFDF6DD2122B4BD00E69812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3FFDF6E02122B4BD00E69812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FFDF6E22122B4BE00E69812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FFDF6E52122B4BE00E69812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		3FFDF71B21231F4A00E69812 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		3FFDF71D21231F5B00E69812 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3FFDF71F2123272300E69812 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		3FFDF7212124064C00E69812 /* AllStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationViewController.swift; sourceTree = "<group>"; };
 		85CE0378CAF0F4DBDB6518F9 /* Pods-RadioOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RadioOnline/Pods-RadioOnline.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D8B084C01FD7FBD2BA3843 /* Pods_RadioOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,9 +78,9 @@
 				3FFDF71B21231F4A00E69812 /* CustomCell.xib */,
 				3FFDF71D21231F5B00E69812 /* CustomCell.swift */,
 				3FFDF6DB2122B4BD00E69812 /* AppDelegate.swift */,
-				3FFDF6DD2122B4BD00E69812 /* ViewController.swift */,
 				3FFDF6DF2122B4BD00E69812 /* Main.storyboard */,
 				3FFDF71F2123272300E69812 /* FavoritesViewController.swift */,
+				3FFDF7212124064C00E69812 /* AllStationViewController.swift */,
 				3FFDF6E22122B4BE00E69812 /* Assets.xcassets */,
 				3FFDF6E42122B4BE00E69812 /* LaunchScreen.storyboard */,
 				3FFDF6E72122B4BE00E69812 /* Info.plist */,
@@ -218,8 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFDF7222124064C00E69812 /* AllStationViewController.swift in Sources */,
 				3FFDF71E21231F5B00E69812 /* CustomCell.swift in Sources */,
-				3FFDF6DE2122B4BD00E69812 /* ViewController.swift in Sources */,
 				3FFDF7202123272300E69812 /* FavoritesViewController.swift in Sources */,
 				3FFDF6DC2122B4BD00E69812 /* AppDelegate.swift in Sources */,
 			);

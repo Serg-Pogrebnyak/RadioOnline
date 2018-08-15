@@ -94,7 +94,7 @@
         <!--All Radio Station-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RadioOnline" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AllStationViewController" customModule="RadioOnline" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GSL-Uv-VQT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -117,7 +117,7 @@
                     <tabBarItem key="tabBarItem" title="All" image="all" id="EJj-vh-Kfw"/>
                     <navigationItem key="navigationItem" title="All Radio Station" id="uvP-S0-61x"/>
                     <connections>
-                        <outlet property="tableView" destination="GSL-Uv-VQT" id="SlC-ZD-zHb"/>
+                        <outlet property="tableView" destination="GSL-Uv-VQT" id="XIy-8a-uL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
