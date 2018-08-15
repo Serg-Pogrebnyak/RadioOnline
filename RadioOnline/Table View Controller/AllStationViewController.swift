@@ -116,7 +116,7 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
         if imageURL.contains("http") {
             
             if let url = URL(string: station.imageURL) {
-                cell?.imageRadioStation.loadImageFromURL(url: url) { (image) in
+                cell?.imageRadioStation.loadImageWithURL(url: url) { (image) in
                     // station image loaded
                 }
             }
@@ -131,32 +131,4 @@ class AllStationViewController: UIViewController, UITableViewDelegate, UITableVi
 
 
 
-}
-
-extension UIImageView {
-    
-    func loadImageFromURL(url: URL, callback: @escaping (UIImage) -> ()) {
-        let session = URLSession.shared
-        
-        let downloadTask = session.downloadTask(with: url, completionHandler: {
-            [weak self] url, response, error in
-            
-            if error == nil && url != nil {
-                if let data = NSData(contentsOf: url!) {
-                    if let image = UIImage(data: data as Data) {
-                        
-                        DispatchQueue.main.async(execute: {
-                            
-                            if let strongSelf = self {
-                                strongSelf.image = image
-                                callback(image)
-                            }
-                        })
-                    }
-                }
-            }
-        })
-        
-        downloadTask.resume()
-    }
 }

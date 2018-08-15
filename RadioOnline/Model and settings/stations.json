@@ -6,6 +6,7 @@
      "streamURL": "http://strm112.1.fm/acountry_mobile_mp3",
      "imageURL": "station-absolutecountry.png",
      "desc": "The Music Starts Here",
+     "favorites" : "true",
      
      },
      {
@@ -13,6 +14,7 @@
      "streamURL": "http://rfcmedia.streamguys1.com/Newport.mp3",
      "imageURL": "station-newportfolk.png",
      "desc": "Are you ready to Folk?",
+     "favorites" : "false",
   
      },
      {
@@ -20,6 +22,7 @@
      "streamURL": "http://jupiter.prostreaming.net/altmixxlow",
      "imageURL": "station-altvault.png",
      "desc": "Your Lifestyle... Your Music!",
+     "favorites" : "false",
 
      },
      {
@@ -27,6 +30,7 @@
      "streamURL": "http://rfcmedia.streamguys1.com/classicrock.mp3",
      "imageURL": "station-classicrock",
      "desc": "Classic Rock Hits",
+     "favorites" : "false",
 
      },
      {
@@ -34,6 +38,7 @@
      "streamURL": "http://radio1190.colorado.edu:8000/high.mp3",
      "imageURL": "",
      "desc": "KVCU - Boulder, CO",
+     "favorites" : "true",
      }
     ]
 }
